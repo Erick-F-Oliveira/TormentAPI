@@ -17,7 +17,7 @@ let weaponSchema = new Schema(
     reach: { type: String, required: true },
     space: { type: Number, required: true },
     origin: { type: String, enum: ["oficial", "homebrew"], default: "oficial" },
-    author: { type: String },
+    author: { type: String,default: "Jambô Editora" },
     reference: { type: String, required: true }, //Nome do meterial onde encontrar, ou link (caso seja um material apenas online)
     page: { type: Number },
 
@@ -25,6 +25,15 @@ let weaponSchema = new Schema(
   },
   { timestamps: true }
 );
+// Gera uniqueID automaticamente
+weaponSchema.pre('save', function (next) {
+  if (this.isNew || this.isModified('sequence', 'name', 'price', 'typeOfDamage')) {
+    this.uniqueID = `${this.sequence}${this.name}${this.price}${this.typeOfDamage}`
+      .toLowerCase()
+      .replace(/\s+/g, '_');
+  }
+  next();
+});
 
 const Weapon = model("Weapon", weaponSchema);
 export default Weapon;
