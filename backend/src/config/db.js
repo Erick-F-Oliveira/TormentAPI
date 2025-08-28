@@ -1,13 +1,14 @@
 import chalk from "chalk";
 import mongoose from "mongoose";
 import * as dotenv from "dotenv";
+import logger from "../utils/logger.js";
 dotenv.config();
 const uri = process.env.MONGO_URI || mongoUri;
 
 const connect  = async () =>{
   try {
     await mongoose.connect(uri);
-    console.log(chalk.green("🌿 Conexão com MongoDB estabelecida! ✔"));
+    logger.success("🌿 Conexão com MongoDB estabelecida! ✔");
     return true; // Retorna verdadeiro se a conexão for bem-sucedida
   } catch (error) {
     console.error(chalk.bold.red("❌ Erro ao conectar ao MongoDB:\n"), error);
