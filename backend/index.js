@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import connect from "./src/config/db.js";
 import chalk from "chalk";
 import startApi from "./src/start.api.js";
+import logger from "./src/utils/logger.js";
 
   try {
     // Conecta ao MongoDB
@@ -11,7 +12,7 @@ import startApi from "./src/start.api.js";
    await startApi();        
     
   } catch (error) {
-    console.error(chalk.bold.red("❌ Erro ao iniciar o servidor:\n"), error);
+    logger.error(`Erro ao iniciar o servidor:\n ${error}`);
     
   }
 

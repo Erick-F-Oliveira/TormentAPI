@@ -1,6 +1,7 @@
 import * as express from "express";
 import * as chalk from "chalk";
 import Weapon from "../models/Weapon.js";
+import logger from "../utils/logger.js";
 const router = express.Router();
 
 // Busca todos as armas
@@ -55,7 +56,13 @@ router.get("/operator/:username", async (req, res) => {
   //POST
 
   // Adiciona uma nova arma
-  router.post("/add", async (req, res) => {});
+  router.post("/add", async (req, res) => {
+    try {}catch (error) {
+      res.status(500).json({ error: "Erro ao adicionar nova arma" });
+      logger.error(`❌ Erro ao adicionar nova arma:\n ${error}`);
+    }
+
+  });
 });
 
 export default router;
