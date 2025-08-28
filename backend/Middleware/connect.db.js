@@ -8,7 +8,7 @@ const connect = async function connect(mongoose, uri) {
 
 
   } catch (error) {
-    console.error(chalk.bold.red('❌ Erro ao conectar ao MongoDB:'), error);
+    console.error(chalk.bold.red('❌ Erro ao conectar ao MongoDB:\n'), error);
     throw error; // Propaga o erro para quem chamou a função
   }
 }

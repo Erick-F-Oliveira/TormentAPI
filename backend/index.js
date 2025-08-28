@@ -2,7 +2,7 @@ import * as dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import router from "./Routes/Weapon.route.js";
+import Weapon from "./Routes/Weapon.route.js";
 import Connect from "./Middleware/connect.db.js";
 import chalk from "chalk";
 dotenv.config();
@@ -14,7 +14,7 @@ app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 // Rotas
-app.use("/", router);
+app.use("/", Weapon);
 
 // Conexão com MongoDB e inicialização do servidor
 const mongoUri =''
@@ -27,6 +27,6 @@ try {
     console.log(chalk.green(`💻 Servidor no ar, rodando na porta: ${PORT} ✔`));
   });
 } catch (error) {
-  console.error("Erro ao conectar ao MongoDB:", error);
+  console.error(chalk.bold.red("❌ Erro ao iniciar o servidor:\n"), error);
 }
 
