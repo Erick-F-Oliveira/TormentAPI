@@ -7,7 +7,7 @@ const startApi = async () => {
   app.use(express.json());
 
   // Usa as rotas
-  app.use("/", Router);
+  app.use("/api", Router);
 
   const PORT = 5000;
   app.listen(PORT,  () => {     
