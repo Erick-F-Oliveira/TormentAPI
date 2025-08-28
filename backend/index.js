@@ -1,13 +1,11 @@
 import mongoose from "mongoose";
-import Connect from "./Middleware/connect.db.js";
+import connect from "./src/config/db.js";
 import chalk from "chalk";
-import startApi from "./Middleware/start.api.js";
-
-const mongoUri = "mongodb+srv://colaborador:72l7yniTFjT2EHUH@tormentapi.1psse7x.mongodb.net/?retryWrites=true&w=majority&appName=TormentAPI";
+import startApi from "./src/start.api.js";
 
   try {
     // Conecta ao MongoDB
-    await Connect(mongoose, mongoUri);   
+    await connect();   
     
     // Inicia a API
    await startApi();        

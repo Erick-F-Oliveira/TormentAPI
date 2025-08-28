@@ -1,6 +1,6 @@
 import * as express from "express";
 import * as chalk from "chalk";
-import Weapon from "../Models/Weapon.js";
+import Weapon from "../models/Weapon.js";
 const router = express.Router();
 
 // Busca todos as armas
@@ -55,9 +55,7 @@ router.get("/operator/:username", async (req, res) => {
   //POST
 
   // Adiciona uma nova arma
-router.post("/add", async (req, res) => {
-
-})
+  router.post("/add", async (req, res) => {});
 });
 
 export default router;

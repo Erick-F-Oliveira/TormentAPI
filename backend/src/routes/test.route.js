@@ -1,6 +1,6 @@
 import * as express from "express";
 import chalk from "chalk";
-import Test from "../Models/Test.js";
+import Test from "../models/Test.js";
 const router = express.Router();
 
 router.get("/tests", async (req, res) => {

@@ -1,17 +1,15 @@
 import express from "express";
-import Weapon from "./Routes/Weapon.route.js";
-import Book from "./Routes/Book.route.js";
-import Test from "./Routes/Test.route.js";
+import weapon from "./src/routes/weapon.route.js";
+import book from "./src/routes/book.route.js";
+import test from "./src/routes/test.route.js";
 const router = express.Router();
 
 // Rotas de teste
-router.use("/test", Test) /*async (req, res) => {
-  res.status(200).json( "aqui é a rota de teste principal" );
-});*/
+router.use("/test", test); 
 // Rotas de armas
-router.use("/weapon", Weapon);
+router.use("/weapon", weapon);
 // Rotas de livros
-router.use("/book", Book);
+router.use("/book", book);
 
 // Se não achou rota no router
 router.use((req, res) => {

@@ -10,9 +10,9 @@ const startApi = async () => {
   app.use("/api", Router);
 
   const PORT = 5000;
-  app.listen(PORT,  () => {     
-     console.log(chalk.green("🔀 Rotas registradas. ✔"));
-     console.log(chalk.bold.green(`💻 Servidor rodando na porta ${PORT}. ✔`));
+  app.listen(PORT, () => {
+    console.log(chalk.green("🔀 Rotas registradas. ✔"));
+    console.log(chalk.bold.green(`💻 Servidor rodando na porta ${PORT}. ✔`));
   });
 
   return app;

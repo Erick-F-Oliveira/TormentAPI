@@ -1,6 +1,6 @@
 import * as express from "express";
 import * as chalk from "chalk";
-import Book from "../Models/Book.js";
+import Book from "../models/Book.js";
 const router = express.Router();
 
 //Busca todos os livros
@@ -10,7 +10,10 @@ router.get("/books", async (req, res) => {
     res.status(200).json(book);
   } catch (error) {
     res.status(500).json({ error: "Erro ao buscar os livros" });
-    console.error(chalk.bold.red("❌ Erro ao buscar todos os livros:\n"), error);
+    console.error(
+      chalk.bold.red("❌ Erro ao buscar todos os livros:\n"),
+      error
+    );
   }
 });
 
