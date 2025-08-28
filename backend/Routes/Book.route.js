@@ -4,7 +4,7 @@ import Book from "../Models/Book.js";
 const router = express.Router();
 
 //Busca todos os livros
-router.get("/book", async (req, res) => {
+router.get("/books", async (req, res) => {
   try {
     const book = await Book.find();
     res.status(200).json(book);
@@ -13,3 +13,5 @@ router.get("/book", async (req, res) => {
     console.error(chalk.bold.red("❌ Erro ao buscar todos os livros:\n"), error);
   }
 });
+
+export default router;

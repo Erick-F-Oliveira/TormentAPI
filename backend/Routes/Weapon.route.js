@@ -4,7 +4,7 @@ import Weapon from "../Models/Weapon.js";
 const router = express.Router();
 
 // Busca todos as armas
-router.get("/weapon", async (req, res) => {
+router.get("/weapons", async (req, res) => {
   try {
     const weapon = await Weapon.find();
     res.status(200).json(weapon);
@@ -15,7 +15,7 @@ router.get("/weapon", async (req, res) => {
 });
 
 // Busca armas pelo ID
-router.get("/weapon/id/:id", async (req, res) => {
+router.get("/id/:id", async (req, res) => {
   const id = req.params.id;
   try {
     const weapon = await Weapon.findOne({ uniqueID: id });
@@ -27,7 +27,7 @@ router.get("/weapon/id/:id", async (req, res) => {
 });
 
 // Busca armas pelo Nome
-router.get("/weapon/name/:name", async (req, res) => {
+router.get("/name/:name", async (req, res) => {
   const name = req.params.name;
   try {
     const weapon = await Weapon.findOne({ name });
@@ -39,18 +39,25 @@ router.get("/weapon/name/:name", async (req, res) => {
 });
 
 // Busca todas armas por quem cadastrou
-router.get("/weapon/operator/:username", async (req, res) => {
+router.get("/operator/:username", async (req, res) => {
   const username = req.params.username;
   try {
     const weapon = await Weapon.findOne({ operator: username });
     res.status(200).json(weapon);
   } catch (error) {
-    res.status(500).json({ error: "Erro ao buscar arma por username" });
+    res.status(500).json({ error: "Erro ao buscar arma por cadastrante" });
     console.error(
       chalk.bold.red("❌ Erro ao buscar arma pelo nome de quem cadastrou:\n"),
       error
     );
   }
+
+  //POST
+
+  // Adiciona uma nova arma
+router.post("/add", async (req, res) => {
+
+})
 });
 
 export default router;

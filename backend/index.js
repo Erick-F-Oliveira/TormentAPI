@@ -1,32 +1,21 @@
-import * as dotenv from "dotenv";
-import express from "express";
 import mongoose from "mongoose";
-import cors from "cors";
-import Weapon from "./Routes/Weapon.route.js";
 import Connect from "./Middleware/connect.db.js";
 import chalk from "chalk";
-dotenv.config();
-const app = express();
-const PORT = 5000;
+import startApi from "./Middleware/start.api.js";
 
-// Middleware
-app.use(cors({ origin: "*" }));
-app.use(express.json());
+const mongoUri = "";
 
-// Rotas
-app.use("/", Weapon);
+  try {
+    // Conecta ao MongoDB
+    await Connect(mongoose, mongoUri);   
+    
+    // Inicia a API
+   await startApi();    
+    
+    
+  } catch (error) {
+    console.error(chalk.bold.red("❌ Erro ao iniciar o servidor:\n"), error);
+    process.exit(1);
+  }
 
-// Conexão com MongoDB e inicialização do servidor
-const mongoUri =''
-  
-
-try {
-  await Connect(mongoose, mongoUri);
-
-  app.listen(PORT, () => {
-    console.log(chalk.green(`💻 Servidor no ar, rodando na porta: ${PORT} ✔`));
-  });
-} catch (error) {
-  console.error(chalk.bold.red("❌ Erro ao iniciar o servidor:\n"), error);
-}
 
