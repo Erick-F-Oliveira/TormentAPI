@@ -3,44 +3,34 @@ import Weapon from "../models/Weapon.js";
 //GET
 //Controller para buscar todas as armas
 const getAllWeapons = async (req, res) => {
+  const allowedFields = [
+    "name",
+    "author",
+    "origin",
+    "operator",
+    "typeOfDamage",
+    "hilt",
+    "proficiency",
+  ];
+
+  const filter = {};
+
+  for (const key in req.query) {
+    if (allowedFields.includes(key)) {
+      const value = req.query[key];
+      // Aplica regex em campos de texto
+      if (["name", "author", "operator"].includes(key)) {
+        filter[key] = { $regex: value, $options: "i" };
+      } else {
+        filter[key] = value;
+      }
+    }
+  }
   try {
-    const weapon = await Weapon.find();
+    const weapon = await Weapon.find(filter);
     res.status(200).json(weapon);
   } catch (error) {
     res.status(500).json({ error: "Erro ao buscar weapon" });
-  }
-};
-
-//Controller para buscar arma pelo ID
-const getWeaoiponById = async (req, res) => {
-  const id = req.params.id;
-  try {
-    const weapon = await Weapon.findOne({ uniqueID: id });
-    res.status(200).json(weapon);
-  } catch (error) {
-    res.status(500).json({ error: "Erro ao buscar todas as armas" });
-  }
-};
-
-//Controller para buscar arma pelo nome
-const getWeaponByName = async (req, res) => {
-  const name = req.params.name;
-  try {
-    const weapon = await Weapon.findOne({ name });
-    res.status(200).json(weapon);
-  } catch (error) {
-    res.status(500).json({ error: "Erro ao buscar arma pelo nome" });
-  }
-};
-
-//Controller para buscar todas armas por quem cadastrou
-const getWeaponByOperator = async (req, res) => {
-  const username = req.params.username;
-  try {
-    const weapon = await Weapon.findOne({ operator: username });
-    res.status(200).json(weapon);
-  } catch (error) {
-    res.status(500).json({ error: "Erro ao buscar arma por cadastrante" });
   }
 };
 
@@ -95,10 +85,4 @@ const createWeapon = async (req, res) => {
   }
 };
 
-export {
-  createWeapon,
-  getAllWeapons,
-  getWeaoiponById,
-  getWeaponByName,
-  getWeaponByOperator,
-};
+export { createWeapon, getAllWeapons };
