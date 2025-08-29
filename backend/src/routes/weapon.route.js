@@ -54,10 +54,11 @@ router.get("/operator/:username", async (req, res) => {
     );
   }
 
-  //POST
-
-  // Adiciona uma nova arma
-  router.post("/weapon", createWeapon)
+ 
 });
 
+ //POST
+
+  // Adiciona uma nova arma
+router.post("/", createWeapon);
 export default router;

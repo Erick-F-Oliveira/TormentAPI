@@ -1,8 +1,8 @@
-import express from "express";
+import { Router } from 'express';
 import weapon from "./src/routes/weapon.route.js";
 import book from "./src/routes/book.route.js";
 import test from "./src/routes/test.route.js";
-const router = express.Router();
+const router = Router();
 
 // Rotas de teste
 router.use("/test", test); 

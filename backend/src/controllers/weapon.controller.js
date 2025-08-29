@@ -1,8 +1,9 @@
 import Weapon from "../models/Weapon.js";
 
 const createWeapon = async (req, res) => {
+  console.log("Chegou na controller");
   try {
-    const {name, proficiency,proposite,hilt,price,baseDemage,criticalDamage,typeOfDamage,reach,space,origin,author,reference,page,operator} = req.body;
+    const {name, proficiency,proposite,hilt,price,baseDamage,criticalDamage,typeOfDamage,reach,space,origin,author,reference,page,operator} = req.body;
     const sequence = (await Weapon.countDocuments()) + 1
     const newWeapon = new Weapon({
       sequence,
@@ -11,7 +12,7 @@ const createWeapon = async (req, res) => {
       proposite,
       hilt,
       price,
-      baseDemage,
+      baseDamage,
       criticalDamage,
       typeOfDamage,
       reach,
