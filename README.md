@@ -14,7 +14,7 @@ O objetivo é facilitar a busca e indicar **onde encontrar** as informações no
 ---
 
 ## 📂 Estrutura de Pastas
-/backend
+/backend  
 /models -> Schemas do banco de dados
 
    
