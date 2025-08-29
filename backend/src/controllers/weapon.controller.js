@@ -1,5 +1,6 @@
 import Weapon from "../models/Weapon.js";
 
+//GET
 //Controller para buscar todas as armas
 const getAllWeapons = async (req, res) => {
   try {
@@ -43,6 +44,7 @@ const getWeaponByOperator = async (req, res) => {
   }
 };
 
+//POST
 //Controller para criar uma nova arma
 const createWeapon = async (req, res) => {
   console.log("Chegou na controller");
