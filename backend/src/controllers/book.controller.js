@@ -35,4 +35,46 @@ const getAllBooks = async (req, res) => {
   }
 };
 
-export { getAllBooks, getBookById, getBooksByType, getBooksByAuthor };
+//POST
+//Controller para cadastrar um novo livro
+const createBook = async (req, res) => {
+
+ try { 
+const {
+      title,
+      type,      
+      year,
+      author,
+      notes,
+      origin,
+      publisher,
+      isbn,
+      description,
+      operator,
+    } = req.body;
+    const sequence = (await Book.countDocuments()) + 1;
+    const newBook = new Book({
+      sequence,
+      title,
+      type,
+          year,
+      author,
+      notes,
+      origin,
+      publisher,
+      isbn,
+      description,
+      operator,
+    });
+    await newBook.save();
+    res.status(201).json(newBook);
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao criar o livro" });
+  }
+};
+
+
+
+
+export { getAllBooks, createBook };
+

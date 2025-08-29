@@ -7,7 +7,7 @@ import {
 const router = express.Router();
 
 //GET
-router.get("/weapons", getAllWeapons);
+router.get("/", getAllWeapons);
 
 //POST
 router.post("/", createWeapon);

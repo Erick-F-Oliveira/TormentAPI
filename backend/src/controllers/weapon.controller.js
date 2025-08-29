@@ -37,7 +37,7 @@ const getAllWeapons = async (req, res) => {
 //POST
 //Controller para criar uma nova arma
 const createWeapon = async (req, res) => {
-  console.log("Chegou na controller");
+ 
   try {
     const {
       name,
