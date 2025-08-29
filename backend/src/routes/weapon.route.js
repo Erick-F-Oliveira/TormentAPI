@@ -1,7 +1,5 @@
 import express from "express";
-import * as chalk from "chalk";
-import Weapon from "../models/Weapon.js";
-import logger from "../utils/logger.js";
+
 import {
   createWeapon,
   getAllWeapons,
