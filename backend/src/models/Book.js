@@ -6,16 +6,16 @@ const bookSchema = new Schema(
     uniqueID: { type: String, index: true, unique: true }, //Combinação de sequence+name+type+year
     sequence: { type: Number, index: true, unique: true }, 
     //Dados do livro
-    title: { type: String, required: true },
-    type: { type: String, required: true }, // ex: 'Livro', 'Quadrinho', 'Aventura'
-    year: { type: Number, index: true, unique: true }, // ano de publicação
-    author: { type: String }, // quem criou o material homebrew ou autor do livro
+    title: { type: String, required: true },// Titulo do livro
+    type: { type: String, required: true }, // ex: 'Romance', 'Quadrinho', 'Aventura'
+    year: { type: Number, index: true, unique: true }, // Ano de publicação
+    author: { type: String }, // Autor do livro
     notes: { type: String },  // informações extras ou explicações
-    origin: { type: String, enum: ['oficial', 'homebrew'], default: 'oficial' },
+    origin: { type: String, enum: ['oficial', 'homebrew'], default: 'oficial' },//Material oficial ou homebrew
     publisher: { type: String, default: "Jambô Editora" }, // Jambô Editora
-    isbn: { type: String },
-    description: { type: String, required: true },
-    operator: { type: String, required: true }
+    isbn: { type: String },//Codigo ISBN
+    description: { type: String, required: true },//Uma breve descrição do livro
+    operator: { type: String, required: true }//Quem cadastrou o livro
   },
   { timestamps: true }
 );
