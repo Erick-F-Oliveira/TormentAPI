@@ -3,7 +3,7 @@ import {mongoose, Schema} from 'mongoose'
 const bookSchema = new Schema(
   {
     //Controle
-    uniqueID: { type: String, index: true, unique: true }, //Combinação de sequence+name+type+year
+    uniqueID: { type: String, index: true, unique: true }, //Combinação de sequence+title+type+year
     sequence: { type: Number, index: true, unique: true }, 
     //Dados do livro
     title: { type: String, required: true },// Titulo do livro
@@ -23,12 +23,12 @@ const bookSchema = new Schema(
 bookSchema.pre("save", function (next) {
   if (
     this.isNew ||
-    this.isModified("sequence", "name", "type", "year")
+    this.isModified("sequence", "title", "type", "year")
   ) {
     this.uniqueID =
-      `${this.sequence}${this.name}${this.type}${this.year}`
+      `${this.sequence}${this.title}${this.type}${this.year}`
         .toLowerCase()
-        .replace(/\s+/g, "_");
+        .replace(/\s+/g, "");
   }
   next();
 });

@@ -6,19 +6,16 @@ O objetivo é facilitar a busca e indicar **onde encontrar** as informações no
 
 ---
 
-## 🚀 Tecnologias
+## 🚀 Tecnologias  
+### backend
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/) (com [Mongoose](https://mongoosejs.com/))
-
----
-
-## 📂 Estrutura de Pastas
-/backend  
-/models -> Schemas do banco de dados
-
-   
-
+- [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) (com [Mongoose](https://mongoosejs.com/))
+- [Cors](https://github.com/expressjs/cors?tab=readme-ov-file)
+- [Chalk](https://github.com/chalk/chalk)
+- [Jsonwebtoken](https://www.jwt.io/)
+- [Dotenv](https://github.com/motdotla/dotenv)
+- [Nodemon](https://nodemon.io/)
    
 ---
 
@@ -27,4 +24,14 @@ O objetivo é facilitar a busca e indicar **onde encontrar** as informações no
 ### 1. Clone o repositório
 ```bash
 git clone https://github.com/Erick-F-Oliveira/TormentAPI.git
+```
+### 2 Vá até o backend
+```bash
+cd backend
+```
+### 3 Instale e rode o projeo
+```javascript
+npm install
+npm run dev //para rodar o projeto com o nodemon
+npm run start
 ```

@@ -34,7 +34,7 @@ weaponSchema.pre("save", function (next) {
     this.uniqueID =
       `${this.sequence}${this.name}${this.price}${this.typeOfDamage}`
         .toLowerCase()
-        .replace(/\s+/g, "_");
+        .replace(/\s+/g, "");
   }
   next();
 });
