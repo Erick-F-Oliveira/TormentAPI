@@ -1,15 +1,19 @@
 import express from "express";
 import {
   createWeapon,
-  getAllWeapons,
+  getWeapons,
+  editWeapon
 } from "../controllers/weapon.controller.js";
 
 const router = express.Router();
 
 //GET
-router.get("/", getAllWeapons);
+router.get("/", getWeapons);
 
 //POST
 router.post("/", createWeapon);
+
+//PATCH
+router.patch("/", editWeapon);
 
 export default router;

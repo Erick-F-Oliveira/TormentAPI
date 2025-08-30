@@ -2,7 +2,7 @@ import Weapon from "../models/Weapon.js";
 
 //GET
 //Controller para buscar todas as armas
-const getAllWeapons = async (req, res) => {
+const getWeapons = async (req, res) => {
   const allowedFields = [
     "name",
     "author",
@@ -85,4 +85,24 @@ const createWeapon = async (req, res) => {
   }
 };
 
-export { createWeapon, getAllWeapons };
+//PATCH
+//Controller para atualizar uma arma existente
+ const editWeapon = async (req, res) => {
+   const uniqueID = req.params;
+   const newData = req.body;
+    try {
+      const updatedWeapon = await Weapon.findOneAndUpdate({uniqueID}, newData, { new: true });
+      if (!updatedWeapon) {
+        return res.status(404).json({ error: "Arma não encontrada" });
+      }
+      res.status(200).json(updatedWeapon);
+    }catch (error) {
+     res
+       .status(500)
+       .json({ error: "Erro ao atualizar arma", details: error.message });
+   }
+
+ }
+
+
+export { createWeapon, getWeapons, editWeapon };
