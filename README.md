@@ -1,5 +1,6 @@
-# TormentAPI
-API não oficial do universo de Tormenta 
+![TormentAPI](./tormentApi.png)
+
+### API não oficial do universo de Tormenta 
 
 API de fã para consulta de nomes, criaturas, locais e referências do cenário de **Tormenta**.  
 O objetivo é facilitar a busca e indicar **onde encontrar** as informações nos materiais oficiais.
