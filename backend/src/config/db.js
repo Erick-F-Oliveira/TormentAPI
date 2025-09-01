@@ -1,4 +1,3 @@
-import chalk from "chalk";
 import mongoose from "mongoose";
 import * as dotenv from "dotenv";
 import logger from "../utils/logger.js";

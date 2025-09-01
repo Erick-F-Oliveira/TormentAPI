@@ -2,6 +2,7 @@ import { Router } from 'express';
 import weapon from "./src/routes/weapon.route.js";
 import book from "./src/routes/book.route.js";
 import test from "./src/routes/test.route.js";
+import auth from "./src/routes/auth.route.js";
 const router = Router();
 
 // Rotas de teste
@@ -10,6 +11,9 @@ router.use("/test", test);
 router.use("/weapon", weapon);
 // Rotas de livros
 router.use("/book", book);
+// Rotas de autenticação
+router.use("/auth", auth);
+
 
 // Se não achou rota no router
 router.use((req, res) => {
