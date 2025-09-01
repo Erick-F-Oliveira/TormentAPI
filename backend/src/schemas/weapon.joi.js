@@ -14,5 +14,6 @@ const weaponSchema = Joi.object({
   origin: Joi.string().valid("oficial", "homebrew"),
   reference: Joi.string().required(),
   page: Joi.number().optional(),
+  operator: Joi.string().required(),
 });
 export default weaponSchema;
