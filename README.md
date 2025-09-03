@@ -46,6 +46,8 @@ cd backend
 npm install
 ```
 ### 4 Crie um arquivo .env
+Use o arquivo .env.example como exemplo de criação.  
+Mantenha os mesmos nomes do arquivo de exemplo, caso queira mudar não se esqueca de mudar no código também.  
 
 npm run dev //para rodar o projeto com o nodemon
 npm run start
