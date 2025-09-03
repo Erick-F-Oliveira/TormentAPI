@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import * as dotenv from "dotenv";
 import logger from "../utils/logger.js";
 dotenv.config();
-const uri = process.env.MONGO_URI;
+const uri = process.env.MONGODB_URI;
 
 const connect = async () => {
   try {
