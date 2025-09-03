@@ -25,9 +25,11 @@ O objetivo é facilitar a busca e indicar **onde encontrar** as informações no
 ### frontend
 - [React](https://react.dev/learn) + [Vite](https://vite.dev/guide/)
 ---
-## Pré requisitos
-- Ter o Node.js (v22.17.0 ou maior) instalado. [Cique aqui](https://nodejs.org/pt/download) e instale
-- Uma conta no MongoDB Atlas [Cique aqui](../TormentAPI/public/config.mongoDB/README.md) e aprenda como se inscrever e configurar
+## 📋 Pré requisitos
+- Ter o Node.js (v22.17.0 ou maior) instalado.  
+[Cique aqui](https://nodejs.org/pt/download) e instale
+- Uma conta no MongoDB Atlas.  
+[Cique aqui](../TormentAPI/public/config.mongoDB/README.md) e aprenda como se inscrever e configurar
 ---
 ## ⚙️ Instalação e Uso
 
@@ -39,9 +41,12 @@ git clone https://github.com/Erick-F-Oliveira/TormentAPI.git
 ```bash
 cd backend
 ```
-### 3 Instale e rode o projeo
+### 3 Instale o projeo
 ```javascript
 npm install
+```
+### 4 Crie um arquivo .env
+
 npm run dev //para rodar o projeto com o nodemon
 npm run start
-```
+
