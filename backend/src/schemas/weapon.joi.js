@@ -12,6 +12,7 @@ const weaponSchema = Joi.object({
   reach: Joi.string().required(),
   space: Joi.number().required(),
   origin: Joi.string().valid("oficial", "homebrew"),
+  author: Joi.string().optional().default("Jambô Editora"),
   reference: Joi.string().required(),
   page: Joi.number().optional(),
   operator: Joi.string().required(),
