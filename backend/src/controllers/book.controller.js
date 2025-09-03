@@ -21,7 +21,18 @@ const getAllBooks = async (req, res) => {
     if (allowedFields.includes(key)) {
       const value = req.query[key];
       // Aplica regex em campos de texto
-      if (["name", "author", "operator"].includes(key)) {
+      if (
+        [
+          "name",
+          "author",
+          "origin",
+          "operator",
+          "isbn",
+          "type",
+          "year",
+          "publisher",
+        ].includes(key)
+      ) {
         filter[key] = { $regex: value, $options: "i" };
       } else {
         filter[key] = value;

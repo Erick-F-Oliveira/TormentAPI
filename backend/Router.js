@@ -8,9 +8,9 @@ const router = Router();
 // Rotas de teste
 router.use("/test", test); 
 // Rotas de armas
-router.use("/weapon", weapon);
+router.use("/weapons", weapon);
 // Rotas de livros
-router.use("/book", book);
+router.use("/books", book);
 // Rotas de autenticação
 router.use("/auth", auth);
 
