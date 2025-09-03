@@ -1,4 +1,5 @@
 import Book from "../models/Book.js";
+import bookSchema from "../schemas/book.joi.js";
 
 //GET
 //Controller para buscar todos os livros, ou com filtros
@@ -38,33 +39,16 @@ const getAllBooks = async (req, res) => {
 //POST
 //Controller para cadastrar um novo livro
 const createBook = async (req, res) => {
-
- try { 
-const {
-      title,
-      type,      
-      year,
-      author,
-      notes,
-      origin,
-      publisher,
-      isbn,
-      description,
-      operator,
-    } = req.body;
+  const { error, value } = bookSchema.validate(req.body);
+  if (error) {
+    // Retorna erro 400 se a validação falhar
+    return res.status(400).json({ error: error.details[0].message });
+  }
+  try {
     const sequence = (await Book.countDocuments()) + 1;
     const newBook = new Book({
       sequence,
-      title,
-      type,
-          year,
-      author,
-      notes,
-      origin,
-      publisher,
-      isbn,
-      description,
-      operator,
+      ...value,
     });
     await newBook.save();
     res.status(201).json(newBook);
@@ -73,8 +57,4 @@ const {
   }
 };
 
-
-
-
 export { getAllBooks, createBook };
-
