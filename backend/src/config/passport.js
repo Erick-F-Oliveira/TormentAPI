@@ -4,6 +4,7 @@ import { Strategy as DiscordStrategy } from 'passport-discord';
 import * as dotenv from 'dotenv';
 import User from '../models/User.js';
 dotenv.config();
+import logger from '../utils/logger.js';
 const secretSession = process.env.SECRET_SESSION;
 
 const passportConfig = () => {
@@ -30,7 +31,8 @@ passport.use(new DiscordStrategy({
     callbackURL: process.env.DISCORD_REDIRECT_URI,
     scope: ['identify', 'email'] // Escopos que você quer do Discord
 }, async (accessToken, refreshToken, profile, done) => {
-    console.log(`Perfil do Discord: ${JSON.stringify(profile.email)}\nAccess Token: ${accessToken}\nRefresh Token: ${refreshToken}`)
+    logger.success(`O processo de autenticação funcionou.✔`)
+    logger.info(`\nConfira os dados trazidos na autorização:\nPerfil do Discord: ${JSON.stringify(profile.email)}\nAccess Token: ${accessToken}\nRefresh Token: ${refreshToken}`)
  try {
         // Tenta encontrar o usuário pelo Discord ID
         const user = await User.findOne({ discordId: profile.id });

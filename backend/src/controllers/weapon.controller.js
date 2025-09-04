@@ -1,7 +1,6 @@
 import Weapon from "../models/Weapon.js";
 import weaponSchema from "../schemas/weapon.joi.js";
 
-
 //GET
 //Controller para buscar todas as armas
 const getWeapons = async (req, res) => {
@@ -21,7 +20,17 @@ const getWeapons = async (req, res) => {
     if (allowedFields.includes(key)) {
       const value = req.query[key];
       // Aplica regex em campos de texto
-      if (["name", "author", "operator"].includes(key)) {
+      if (
+        [
+          "name",
+          "author",
+          "origin",
+          "operator",
+          "typeOfDamage",
+          "hilt",
+          "proficiency",
+        ].includes(key)
+      ) {
         filter[key] = { $regex: value, $options: "i" };
       } else {
         filter[key] = value;
@@ -32,7 +41,7 @@ const getWeapons = async (req, res) => {
     const weapon = await Weapon.find(filter);
     res.status(200).json(weapon);
   } catch (error) {
-    res.status(500).json({ error: "Erro ao buscar weapon" });
+    res.status(500).json({ error: "Erro ao buscar arma" });
   }
 };
 
@@ -40,8 +49,8 @@ const getWeapons = async (req, res) => {
 //Controller para criar uma nova arma
 const createWeapon = async (req, res) => {
   const userId = req.user._id;
-    const username = req.user.username;
-    console.log(`User ID: ${userId}, Username: ${username}`);
+  const username = req.user.username;
+  console.log(`User ID: ${userId}, Username: ${username}`);
   const { error, value } = weaponSchema.validate(req.body);
   if (error) {
     // Retorna erro 400 se a validação falhar
@@ -60,7 +69,7 @@ const createWeapon = async (req, res) => {
     res.status(201).json(newWeapon);
   } catch (error) {
     if (error.code === 11000) {
-      return res.status(400).json({ error: "Já existe uma arma este nome." });
+      return res.status(400).json({ error: `Já ha uma arma com o nome ${value.name} cadstrada\nCertifique-se do nome nome da arma e tente novamente.` });
     }
     res
       .status(500)
