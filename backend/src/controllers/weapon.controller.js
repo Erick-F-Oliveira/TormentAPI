@@ -1,6 +1,7 @@
 import Weapon from "../models/Weapon.js";
 import weaponSchema from "../schemas/weapon.joi.js";
 
+
 //GET
 //Controller para buscar todas as armas
 const getWeapons = async (req, res) => {
@@ -38,6 +39,9 @@ const getWeapons = async (req, res) => {
 //POST
 //Controller para criar uma nova arma
 const createWeapon = async (req, res) => {
+  const userId = req.user._id;
+    const username = req.user.username;
+    console.log(`User ID: ${userId}, Username: ${username}`);
   const { error, value } = weaponSchema.validate(req.body);
   if (error) {
     // Retorna erro 400 se a validação falhar
@@ -48,6 +52,7 @@ const createWeapon = async (req, res) => {
     const sequence = (await Weapon.countDocuments()) + 1;
     const newWeapon = new Weapon({
       sequence,
+      operator: username,
       ...value,
     });
 

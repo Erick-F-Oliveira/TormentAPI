@@ -15,6 +15,5 @@ const weaponSchema = Joi.object({
   author: Joi.string().optional().default("Jambô Editora"),
   reference: Joi.string().required(),
   page: Joi.number().optional(),
-  operator: Joi.string().required(),
-});
+ });
 export default weaponSchema;

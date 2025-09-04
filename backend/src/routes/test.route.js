@@ -3,10 +3,12 @@ import Test from "../models/Test.js";
 const router = express.Router();
 
 
+
 router.get("/tests", async (req, res) => {
   try {
     const test = await Test.find();
-    res.status(200).json(test);
+    res.status(200).json(test);    
+
   } catch (error) {
     res.status(500).json({ error: "Erro ao buscar os documentos" });
   }

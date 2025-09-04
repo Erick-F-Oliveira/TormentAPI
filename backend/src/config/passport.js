@@ -2,27 +2,26 @@ import session from 'express-session';
 import passport from 'passport';
 import { Strategy as DiscordStrategy } from 'passport-discord';
 import * as dotenv from 'dotenv';
+import User from '../models/User.js';
 dotenv.config();
 const secretSession = process.env.SECRET_SESSION;
 
 const passportConfig = () => {
   
-
-// server.js
-
-// ... depois da configuração do app.use(passport.session()) ...
-
 passport.serializeUser((user, done) => {
-    // Apenas salva o ID do usuário na sessão
+   
     done(null, user.id);
 });
 
-passport.deserializeUser(async (id, done) => {
-    // Aqui você buscaria o usuário no seu banco de dados pelo ID
-    // Por enquanto, vamos simular a busca
-    const user = { id: id, username: 'ExemploUser' }; 
-    done(null, user);
+  passport.deserializeUser(async (id, done) => {
+    try {
+        const user = await User.findById(id);
+        done(null, user);
+    } catch (err) {
+        done(err, null);
+    }
 });
+
 
 // Configure a estratégia
 passport.use(new DiscordStrategy({
@@ -30,12 +29,32 @@ passport.use(new DiscordStrategy({
     clientSecret: process.env.DISCORD_CLIENT_SECRET,
     callbackURL: process.env.DISCORD_REDIRECT_URI,
     scope: ['identify', 'email'] // Escopos que você quer do Discord
-}, (accessToken, refreshToken, profile, done) => {
-    // Esta função é chamada quando a autenticação é bem-sucedida.
-    // O 'profile' contém os dados do usuário do Discord.
-    // Aqui é onde você salvaria o usuário no seu banco de dados ou o buscaria.
-    // A chamada 'done(null, profile)' passa o usuário para o passport.
-    return done(null, profile);
+}, async (accessToken, refreshToken, profile, done) => {
+    console.log(`Perfil do Discord: ${JSON.stringify(profile.email)}\nAccess Token: ${accessToken}\nRefresh Token: ${refreshToken}`)
+ try {
+        // Tenta encontrar o usuário pelo Discord ID
+        const user = await User.findOne({ discordId: profile.id });
+
+        if (user) {
+            // Se o usuário existe, retorna-o
+            return done(null, user);
+        } else {
+            // Se o usuário é novo, cria um novo documento
+            const newUser = new User({
+                discordId: profile.id,
+                username: profile.username,
+                email: profile.email
+            });
+
+            const savedUser = await newUser.save();
+            return done(null, savedUser);
+        }
+    } catch (err) {
+        return done(err, null);
+    }
+    
+    
+
 }));
 
 }

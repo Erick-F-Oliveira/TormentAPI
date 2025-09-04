@@ -1,6 +1,6 @@
 ![TormentAPI](./tormentApi.png)
 
-### API não oficial do universo de Tormenta 
+### API não oficial do universo de Tormenta. 
 
 API de fã para consulta de nomes, criaturas, locais e referências do cenário de **Tormenta**.  
 O objetivo é facilitar a busca e indicar **onde encontrar** as informações nos materiais oficiais.
@@ -25,30 +25,34 @@ O objetivo é facilitar a busca e indicar **onde encontrar** as informações no
 ### frontend
 - [React](https://react.dev/learn) + [Vite](https://vite.dev/guide/)
 ---
-## 📋 Pré requisitos
+## 📋 Pré requisitos.
 - Ter o Node.js (v22.17.0 ou maior) instalado.  
 [Cique aqui](https://nodejs.org/pt/download) e instale
 - Uma conta no MongoDB Atlas.  
-[Cique aqui](../TormentAPI/public/config.mongoDB/README.md) e aprenda como se inscrever e configurar
+[Cique aqui](../TormentAPI/public/config.mongoDB/README.md) e aprenda como se inscrever e configurar  
+- Aplicação de atorização do Discord.
 ---
-## ⚙️ Instalação e Uso
+## ⚙️ Instalação e Uso.
 
-### 1. Clone o repositório
+### 1. Clone o repositório.
 ```bash
 git clone https://github.com/Erick-F-Oliveira/TormentAPI.git
 ```
-### 2 Vá até o backend
+### 2 Vá até o backend.
 ```bash
 cd backend
 ```
-### 3 Instale o projeo
-```javascript
+### 3 Instale o projeto.
+```bash
 npm install
 ```
 ### 4 Crie um arquivo .env
 Use o arquivo .env.example como exemplo de criação.  
 Mantenha os mesmos nomes do arquivo de exemplo, caso queira mudar não se esqueca de mudar no código também.  
+Subistitua os valores do .env pelos seus.  
 
+### 5 Teste o projeto.
+```javascript
 npm run dev //para rodar o projeto com o nodemon
 npm run start
-
+```
