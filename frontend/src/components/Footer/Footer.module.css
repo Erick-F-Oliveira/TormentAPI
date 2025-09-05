@@ -1,0 +1,26 @@
+.footer {
+    height: 45px;
+    width: 100%;
+    color: var(--black);
+    background-color: var(--red);
+    font-weight: bold;
+    font-size: 20px;
+    font-family: var(--openSans);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+li {
+    margin: 10px;
+}

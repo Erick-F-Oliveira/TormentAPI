@@ -1,0 +1,30 @@
+.header {
+    height: 45px;
+    width: 100%;
+    color: #000;
+    background-color: var(--red);
+    font-family: var(--openSans);
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold
+}
+
+.header span {
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--black);
+    padding-right: 1.5rem;
+    font-size: 20px;
+}
+
+.header a:hover {
+    color: #777575;
+
+}
