@@ -4,11 +4,11 @@ import api from "../../Service/axios.service";
 import { useEffect, useState } from "react";
 
 function Home() {
-  
+
   return (
     <>
       <main className={styles.home}>
-        <p className={styles.first}>TormemtAPI</p>       
+        <p>Ajude a construir a maior base de dados do maior RPG do Brasil</p>
       </main>
     </>
   );

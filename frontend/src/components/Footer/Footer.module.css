@@ -1,8 +1,8 @@
 .footer {
-    height: 45px;
+    height: 100px;
     width: 100%;
-    color: var(--black);
-    background-color: var(--red);
+    color: var(--soft-white);
+    background-color: var(--soft-black);
     font-weight: bold;
     font-size: 20px;
     font-family: var(--openSans);

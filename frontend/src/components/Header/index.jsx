@@ -3,13 +3,11 @@ import styles from "./Header.module.css";
 function Header() {
     return (
         <header className={styles.header}>
-            <span>
-                <Link to="/">TormentAPI</Link>
-            </span>
-            <nav>
 
-            </nav>
-        </header>
+            <Link to="/"><img src="./logo.png" alt="Logo" className={styles.logo}></img></Link>
+
+
+        </header >
     );
 }
 export default Header;

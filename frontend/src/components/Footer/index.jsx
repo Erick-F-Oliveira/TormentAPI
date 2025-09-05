@@ -5,8 +5,7 @@ function Footer() {
 
             <ul className={styles.list}>
                 <li>Sobre</li>
-                <li>Politica</li>
-                <li>Sobre</li>
+                <li>Privacidade</li>
             </ul>
 
 

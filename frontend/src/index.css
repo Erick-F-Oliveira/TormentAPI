@@ -1,19 +1,28 @@
+@font-face {
+  font-family: 'Tormenta';
+  src: url('../assets/fonts/Tormenta20x.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  font-family: Bree Serif;
+  font-family: 'Poppins', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+
   @media (min-width: 768px) {
     font-size: 18px;
   }
 
-  --bree:'Bree Serif';
-  --openSans: 'Open Sans';
-  --red: #FF6F61;
-  --black: #2E4053;
+  --tormenta:'Tormenta'
+  --poppins:'Poppins';
+  --black: #191919;
+  --soft-black:#252525;
   --white: #fff;
   --soft-white: #f1f1f1;
   --gray: #cbc8c8;

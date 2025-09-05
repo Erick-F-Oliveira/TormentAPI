@@ -1,9 +1,9 @@
 .header {
-    height: 45px;
+    height: 80px;
     width: 100%;
-    color: #000;
-    background-color: var(--red);
-    font-family: var(--openSans);
+    color: var(--soft-white);
+    background-color: var(--black);
+    font-family: var(--poppins);
     font-size: 20px;
     display: flex;
     justify-content: space-around;
@@ -17,14 +17,21 @@
 
 }
 
+.logo {
+    width: 250px;
+    height: auto;
+    transition: width 0.3s ease;
+    /* suaviza a transição */
+}
+
+
 .header a {
     text-decoration: none;
-    color: var(--black);
-    padding-right: 1.5rem;
+    color: var(--soft-white);
     font-size: 20px;
 }
 
 .header a:hover {
-    color: #777575;
+    opacity: 75%;
 
 }

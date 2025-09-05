@@ -6,8 +6,9 @@
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
-    background-color: var(--pink);
-    font-family: var(--bree);
+    color: var(--soft-white);
+    background-color: var(--soft-black);
+    font-family: var(--poppins);
     padding: 2%;
 }
 
@@ -26,14 +27,6 @@ a {
     flex-direction: column;
     margin: 20px;
 }
-
-
-
-.home img {
-    height: 500px;
-}
-
-
 
 .btn {
     width: 180px;
