@@ -2,7 +2,7 @@ import axios from "axios";
 import dotenv from "dotenv";
 dotenv.config();
 
-const baseURL = /*"http://localhost:3000" ||*/import.meta.env.VITE_SITE;
+const baseURL = /*"http://localhost:5000" ||*/import.meta.env.VITE_SITE;
 const api = axios.create({
     baseURL: baseURL,
 })
