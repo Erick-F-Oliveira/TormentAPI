@@ -2,7 +2,7 @@
     height: 100px;
     width: 100%;
     color: var(--soft-white);
-    background-color: var(--soft-black);
+    background-color: var(--black);
     font-weight: bold;
     font-size: 20px;
     font-family: var(--openSans);

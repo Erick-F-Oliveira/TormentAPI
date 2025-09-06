@@ -1,4 +1,4 @@
-.home {
+.auth {
   width: 100%;
   min-height: 90vh;
   display: flex;
@@ -9,11 +9,11 @@
   color: var(--soft-white);
   background-color: var(--soft-black);
   font-family: var(--poppins);
-  padding: 2%;
+  padding: 1%;
 }
 
-.home p {
-  font-size: 50px;
+.auth p {
+  font-size: 40px;
 
 }
 
@@ -23,7 +23,7 @@ a {
 }
 
 .btn {
-  font-size: 40px;
+  font-size: 55px;
   border: 0;
   cursor: pointer;
   display: flex;

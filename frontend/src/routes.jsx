@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import Error404 from "./pages/404";*/
 //import Signin from "./pages/Signin";
 import Base from "./pages/Base";
+import Auth from "./pages/Auth";
 //import Login from "./pages/Login";
 //import Dash from "./pages/Dash";
 
@@ -14,8 +15,9 @@ function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Base />}>
-          <Route index element={<Home />}></Route>
-        </Route>
+        <Route index element={<Home />}></Route>
+        <Route path="auth" element={<Auth/>}></Route>           
+        </Route>   
       </Routes>
     </BrowserRouter>
   );
