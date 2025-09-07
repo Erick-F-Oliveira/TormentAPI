@@ -45,6 +45,7 @@ passport.use(new DiscordStrategy({
             const newUser = new User({
                 discordId: profile.id,
                 username: profile.username,
+                avatar: profile.avatar || '',
                 email: profile.email
             });
 

@@ -22,19 +22,4 @@ a {
   color: var(--soft-white);
 }
 
-.btn {
-  font-size: 55px;
-  border: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-    
-}
 
-.btn:hover {
-  opacity: 0.5;
-    transition: 0.3s;
-    color: var(--gray)
-}

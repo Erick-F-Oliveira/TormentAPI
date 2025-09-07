@@ -1,10 +1,12 @@
+// src/Service/axios.service.js
 import axios from "axios";
 
+const baseURL = import.meta.env.VITE_SITE ? import.meta.env.VITE_SITE : "http://localhost:5000/api";
 
-const baseURL = /*"http://localhost:5000" ||*/import.meta.env.VITE_SITE;
 const api = axios.create({
     baseURL: baseURL,
-})
-export default api
-//console.log(baseURL, "baseURL");
-//comentario
+    // Adicione esta linha para enviar cookies com as requisições
+    withCredentials: true
+});
+
+export default api;

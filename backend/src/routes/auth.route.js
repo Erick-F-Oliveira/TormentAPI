@@ -11,7 +11,7 @@ router.get(
   "/discord/callback",
   passport.authenticate("discord", {
     failureRedirect: "/login-falhou", // Rota em caso de falha
-    successRedirect: "/api/weapon", // Rota em caso de sucesso
+    successRedirect: "http://localhost:5173/dashboard" // Rota em caso de sucesso
   })
 );
 

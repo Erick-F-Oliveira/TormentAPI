@@ -12,7 +12,15 @@ const secretSession = process.env.SECRET_SESSION;
 const startApi = async () => {
   const app = express();
   app.use(express.json());
-  app.use(cors({ origin: "*" }));
+  app.use(express.json());
+  // Configuração do CORS com credenciais precisam de um endereço específico. No "*"
+  // não funciona.
+  app.use(
+    cors({
+      origin: "http://localhost:5173", // A URL do seu front-end
+      credentials: true,
+    })
+  );
 
   // Configuração da sessão
   app.use(
@@ -29,7 +37,7 @@ const startApi = async () => {
   // Usa as rotas
   app.use("/api", Router);
 
-  const PORT = process.config.PORT||5000;
+  const PORT = process.config.PORT || 5000;
   app.listen(PORT, () => {
     logger.success("🔀 Rotas registradas. ✔");
     logger.success(`💻 Servidor rodando na porta ${PORT}. ✔`);

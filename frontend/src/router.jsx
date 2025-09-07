@@ -8,16 +8,19 @@ import Error404 from "./pages/404";*/
 import Base from "./pages/Base";
 import Auth from "./pages/Auth";
 //import Login from "./pages/Login";
-//import Dash from "./pages/Dash";
+import Dashboard from "./pages/Dashboard";
+import { AuthProvider } from "./context/AuthContext";
+import PrivateRoute from "./routes/authRoutes";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Base />}>
-        <Route index element={<Home />}></Route>
-        <Route path="auth" element={<Auth/>}></Route>           
-        </Route>   
+          <Route index element={<Home />}></Route>
+          <Route path="auth" element={<Auth />}></Route>
+          <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
