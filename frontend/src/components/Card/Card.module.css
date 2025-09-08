@@ -1,0 +1,35 @@
+/* src/components/BookCard.module.css */
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    width: 400px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    font-size: 15px;
+
+}
+
+.card:hover {
+    transform: translateY(-2px);
+
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.expandedContent {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+
+
+}
+
+.expandedContent p {
+    font-size: 18px;
+}
