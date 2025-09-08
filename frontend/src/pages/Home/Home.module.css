@@ -8,7 +8,7 @@
   justify-content: space-evenly;
   color: var(--soft-white);
   background-color: var(--soft-black);
-  font-family: var(--poppins);
+  font-family: var(--subtitles);
   padding: 2%;
 }
 
@@ -17,12 +17,13 @@
 
 }
 
-a {
+.btn a {
   text-decoration: none;
-  color: var(--soft-white);
+ color: var(--tormenta-red-dark);
 }
 
 .btn {
+  font-family: var(--subtitles);
   font-size: 40px;
   border: 0;
   cursor: pointer;
@@ -34,9 +35,8 @@ a {
 }
 
 .btn:hover {
-  opacity: 0.5;
   transition: 0.3s;
-  color: var(--gray)
+  color: var(--glow);
 }
 
 .cards {
@@ -44,5 +44,5 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 3px;
+  gap: 5px;
 }
