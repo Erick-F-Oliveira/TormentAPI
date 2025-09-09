@@ -3,6 +3,7 @@ import api from "../../Service/axios.service";
 import { FaDiscord } from "react-icons/fa";
 import { useAuth } from '../../context/AuthContext';
 import { Navigate } from 'react-router-dom';
+import Button from "@mui/material/Button"
 
 const Auth = () => {
   const { isLoggedIn, loading, user } = useAuth();
@@ -21,7 +22,9 @@ const Auth = () => {
   return (
     <>
       <main className={styles.auth}>
-        <p>Entre com sua conta do Discord<br/><a href="http://localhost:5000/api/auth/discord/login"> <span className={styles.btn}><FaDiscord /></span></a></p>
+        <p>Autentique-se<br/><a href="http://localhost:5000/api/auth/discord/login"> <span>   <Button variant="outlined">
+          <FaDiscord fontSize={"45px"} />
+        </Button></span></a></p>
        
       </main>
       
