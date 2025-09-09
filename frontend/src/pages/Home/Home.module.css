@@ -19,7 +19,7 @@
 
 .btn a {
   text-decoration: none;
- color: var(--tormenta-red-dark);
+  color: var(--tormenta-red-dark);
 }
 
 .btn {
@@ -31,6 +31,13 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+
+}
+
+.discord {
+  color: blueviolet;
+  font-size: 40px;
+
 
 }
 

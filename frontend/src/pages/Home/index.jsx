@@ -1,6 +1,9 @@
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import Card from "../../components/Card";
+import { FaDiscord } from "react-icons/fa";
+import Button from "../../components/Button";
+//import Button from '@mui/material/Button';
 const sampleBook = {
   "name": "Espada curta",
   "proficiency": "Arma Simples",
@@ -33,6 +36,7 @@ function Home() {
           <Card book={sampleBook} />
           <Card book={sampleBook} />
         </div>
+        <Button />
       </main>
 
     </>
