@@ -28,13 +28,10 @@ function Home() {
           Ajude a construir a<br /> maior base de dados do <br />
           maior RPG do Brasil
         </p>
-        <div className={styles.btn}>
-          <Link to="/auth">Começar →</Link>
-        </div>
         <div className={styles.cards}>
           <Card book={sampleBook} />
           <Card book={sampleBook} />
-        </div>      
+        </div>
       </main>
     </>
   );
