@@ -1,6 +1,8 @@
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import Card from "../../components/Card";
+import { FaGithub, FaArrowRight } from "react-icons/fa6";
+import Button from "@mui/material/Button"
 
 const sampleBook = {
   name: "Espada curta",
@@ -25,13 +27,18 @@ function Home() {
     <>
       <main className={styles.home}>
         <p>
-          Ajude a construir a<br /> maior base de dados do <br />
+          Ajude a construir a maior base de dados do <br />
           maior RPG do Brasil
         </p>
-        <div className={styles.cards}>
+        Ainda estamos estruturando as coisas, se quiser ajudar você pode<br />
+        Veja a documentação.<br />
+        <Button variant="outlined"
+
+
+          {/*  <div className={styles.cards}>
           <Card book={sampleBook} />
           <Card book={sampleBook} />
-        </div>
+  </div>*/}
       </main>
     </>
   );
