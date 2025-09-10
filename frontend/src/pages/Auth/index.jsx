@@ -23,14 +23,12 @@ const Auth = () => {
     <>
       <main className={styles.auth}>
         <div className={styles.text}>
-          <p>Antes de começar, precisamos que você se autentique com uma conta do discord. </p>
-          Isso é importante para que possamos manter um controlle melhor de quem está fazendo
-          o cadstro das informações na API.<br />
+          <p>Antes de começar, precisamos que você se autentique com uma conta do Discord.</p><br />
+          Isso é importante para que possamos manter um controle melhor de quem está fazendo
+          o cadstro das informações na API, pelo menos nesse primeiro momento.<br />
           Com a autenticação nós usamos as informaçõs de perfil e email que o discord fornece.
-          Usamos seu Username como nome publico e seu Avatar.
+          Usamos seu Username como o nome as ser exibido e seu Avatar.<br />
         </div>
-
-
         <p>
           Autentique-se
           <br />

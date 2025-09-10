@@ -9,17 +9,16 @@
   color: var(--soft-white);
   background-color: var(--soft-black);
   font-family: var(--poppins);
-  padding: 1%;
+  padding: 2%
+}
+
+.text {
+  font-size: 20px;
+
 }
 
 .auth p {
-  font-size: 40px;
+  font-size: 25px;
+  padding: 4%;
 
 }
-
-a {
-  text-decoration: none;
-  color: var(--soft-white);
-}
-
-
