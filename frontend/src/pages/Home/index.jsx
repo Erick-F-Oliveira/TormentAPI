@@ -2,7 +2,7 @@ import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import Card from "../../components/Card";
 import { FaGithub, FaArrowRight } from "react-icons/fa6";
-import Button from "@mui/material/Button"
+import Button from "@mui/material/Button";
 
 const sampleBook = {
   name: "Espada curta",
@@ -30,12 +30,29 @@ function Home() {
           Ajude a construir a maior base de dados do <br />
           maior RPG do Brasil
         </p>
-        Ainda estamos estruturando as coisas, se quiser ajudar você pode<br />
-        Veja a documentação.<br />
-        <Button variant="outlined"
-
-
-          {/*  <div className={styles.cards}>
+        Ainda estamos estruturando as coisas, se quiser ajudar você pode
+        <br />
+       
+        <br />
+      
+        <div className={styles.btn}>
+           Veja o repositório.
+          <Button variant="contained" size="large">
+            {" "}
+            <FaGithub />{" "}
+          </Button>
+            Ou siga para autenticação.
+          <Button
+            variant="contained"
+            endIcon={<FaArrowRight />}
+            component={Link}
+            to="/auth"
+          >
+            {" "}
+            Seguir{" "}
+          </Button>
+        </div>
+        {/*  <div className={styles.cards}>
           <Card book={sampleBook} />
           <Card book={sampleBook} />
   </div>*/}
