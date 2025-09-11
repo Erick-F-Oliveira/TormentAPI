@@ -23,15 +23,15 @@
   --titles:'Cinzel';
   --subtitles:'Bitter';
   --body:'Poppins';
-  --black: #0f0f0f;
-  --soft-black:#222327;
+  --black: rgb(107, 107, 107);
+  --soft-black:rgba(107, 107, 107, 0.500);
   --white: #fff;
-  --soft-white: #f1f1f1;
+  --soft-white: #ffffff;
   --gray: #cbc8c8;
-  --tormenta-red: #c00000;     
-  --tormenta-red-light: #d55758; 
-  --tormenta-red-dark: #bf0101;
-  --glow: rgba(224, 49, 49, 0.2); 
+  --tormenta: #f5f0f0;
+  --tormenta-light: #d55758;
+  --tormenta-dark: #bf0101;
+  --glow: rgba(224, 49, 49, 0.2);
 }
 
 
