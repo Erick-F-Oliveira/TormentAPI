@@ -7,7 +7,7 @@
 }
 
 :root {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Tormenta', 'Cinzel', 'Bitter', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -19,14 +19,19 @@
     font-size: 18px;
   }
 
-  --tormenta:'Tormenta'
-  --poppins:'Poppins';
-  --black: #191919;
-  --soft-black:#252525;
+  --tormenta:'Tormenta';
+  --titles:'Cinzel';
+  --subtitles:'Bitter';
+  --body:'Poppins';
+  --black: rgb(107, 107, 107);
+  --soft-black:rgba(107, 107, 107, 0.500);
   --white: #fff;
-  --soft-white: #f1f1f1;
+  --soft-white: #ffffff;
   --gray: #cbc8c8;
-  --pink: #FFE8E8;
+  --tormenta: #f5f0f0;
+  --tormenta-light: #d55758;
+  --tormenta-dark: #bf0101;
+  --glow: rgba(224, 49, 49, 0.2);
 }
 
 

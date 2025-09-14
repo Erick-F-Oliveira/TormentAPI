@@ -1,38 +1,36 @@
 .home {
   padding: 20px;
   text-align: center;
+  justify-content: space-evenly;
+  color: var(--soft-white);
+  background-color: var(--soft-black);
+  font-family: var(--poppins);
+  padding: 2%;
 }
 
-/* Estilo padrão */
-.title {
-  font-size: 2rem;
-  color: #333;
+.home p {
+  font-size: 50px;
+
 }
 
-.text {
-  font-size: 1.2rem;
+a {
+  text-decoration: none;
+  color: var(--soft-white);
 }
 
-/* Tablet (até 768px) */
-@media (max-width: 768px) {
-  .title {
-    font-size: 1.5rem;
-    color: darkblue;
-  }
-
-  .text {
-    font-size: 1rem;
-  }
+.btn {
+  font-size: 40px;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+    
 }
 
-/* Celular (até 480px) */
-@media (max-width: 480px) {
-  .title {
-    font-size: 1.2rem;
-    color: darkred;
-  }
-
-  .text {
-    font-size: 0.9rem;
-  }
+.btn:hover {
+  opacity: 0.5;
+    transition: 0.3s;
+    color: var(--gray)
 }

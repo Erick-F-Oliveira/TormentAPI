@@ -1,19 +1,61 @@
 import styles from "./Home.module.css";
-import api from "../../Service/axios.service";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import Card from "../../components/Card";
+import { FaGithub, FaArrowRight } from "react-icons/fa6";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton"
+
+const sampleBook = {
+  name: "Espada curta",
+  proficiency: "Arma Simples",
+  proposite: "Corpo a Corpo",
+  hilt: "Leve",
+  price: 10,
+  baseDamage: "1d6",
+  criticalDamage: "19",
+  typeOfDamage: "Perfuração",
+  reach: " Corpo a Corpo ",
+  space: 1,
+  description: "O tipo mais comum de espada...",
+  reference: "Livro Básico JDA",
+  page: 0,
+  sequence: 2,
+  operator: "obernac",
+};
 
 function Home() {
-
   return (
     <>
       <main className={styles.home}>
-        <p>Ajude a construir a<br/> maior base de dados do <br/>maior RPG do Brasil</p>
+        <p>
+          Ajude a construir a maior base de dados do <br />
+          maior RPG do Brasil
+        </p>
+        Ainda estamos estruturando as coisas, então não repare na bagunça 😅<br />
+
         <div className={styles.btn}>
-        <Link to="/auth">{" "}Começar →</Link>
-      </div>
+          Veja o repositório.
+          <a href="https://httpbin.org/headers" target="_blank" rel="noopener noreferrer"><IconButton size="large" color="tormenta">
+            {" "}
+            <FaGithub />{" "}
+          </IconButton>
+          </a>
+          Ou siga para autenticação.
+          <Button
+            color="tormenta"
+            endIcon={<FaArrowRight />}
+            component={Link}
+            to="/auth"
+          >
+            {" "}
+            Seguir{" "}
+          </Button>
+        </div>
+        {/*  <div className={styles.cards}>
+          <Card book={sampleBook} />
+          <Card book={sampleBook} />
+  </div>*/}
       </main>
-      
     </>
   );
 }
