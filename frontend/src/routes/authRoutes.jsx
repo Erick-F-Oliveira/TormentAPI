@@ -11,7 +11,7 @@ const PrivateRoute = ({ children }) => {
 
   if (!isLoggedIn) {
     // Redireciona o usuário se ele não estiver logado
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   return children;

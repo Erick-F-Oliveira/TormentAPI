@@ -34,13 +34,13 @@ function Home() {
         Ainda estamos estruturando as coisas, então não repare na bagunça 😅<br />
 
         <div className={styles.btn}>
-          Veja o repositório.
+          Veja o repositório.<br/>
           <a href="https://httpbin.org/headers" target="_blank" rel="noopener noreferrer"><IconButton size="large" color="tormenta">
             {" "}
             <FaGithub />{" "}
-          </IconButton>
-          </a>
-          Ou siga para autenticação.
+          </IconButton></a><br/>
+          
+          Ou siga para autenticação.<br/>
           <Button
             color="tormenta"
             endIcon={<FaArrowRight />}

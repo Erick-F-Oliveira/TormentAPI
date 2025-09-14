@@ -35,7 +35,7 @@ const Auth = () => {
           <a href="http://localhost:5000/api/auth/discord/login">
             {" "}
             <Button variant="contained" color="discord">
-              <FaDiscord fontSize={"45px"} />
+              <FaDiscord fontSize={"2rem"} />
             </Button>
           </a>
         </p>
