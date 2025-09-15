@@ -1,7 +1,6 @@
 .mock {
     width: 100%;
-    min-height: 90vh;
-    padding: 0.5rem;
+    min-height: 90vh;   
     text-align: center;
     justify-content: flex-start;
     align-items: flex-start;

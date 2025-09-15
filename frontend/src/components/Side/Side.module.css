@@ -1,33 +1,45 @@
 .side {
-      height: 100vh; /* ⬅️ Altura total da viewport */
+  height: 100vh;
   width: 150px;
-    color: var(--soft-white);
-    background-color: var(--black);
-    font-size: 1.5rem;
-    font-weight: 400;
-    font-family: var(--body);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 15px;
+  color: var(--soft-white);
+  background-color: var(--black);
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: var(--body);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  padding-top: 20px;
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-    list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: stretch; 
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-a {
-    margin: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--soft-white);
+.list li {
+  width: 100%;
+  text-align: left;
 }
 
-a:hover {
-    font-weight: 600;
+.list a {
+  display: block; 
+  padding: 10px 16px; 
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--soft-white);
+  border-bottom: 2px solid var(--soft-white); 
+  transition: border-color 0.3s;
+}
+
+.list a:hover {
+  border-bottom-color: var(--tormenta);
+  font-weight: 400;
 }
