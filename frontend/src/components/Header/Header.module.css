@@ -1,37 +1,30 @@
+@font-face {
+    font-family: 'Tormenta';
+    src: url('../../assets/fonts/Tormenta20x.ttf') format('truetype');
+}
+
 .header {
-    height: 80px;
+    height: 5rem;
     width: 100%;
-    color: var(--soft-white);
-    background-color: var(--black);
-    font-family: var(--poppins);
-    font-size: 20px;
+    background-color: var(--gray);
+    color: var(--tormenta);
+    font-family: Tormenta;
+    font-size: 1.5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-weight: bold
-}
-
-.header span {
-    font-size: 12px;
     font-weight: bold;
 
 }
 
-.logo {
-    width: 250px;
-    height: auto;
-    transition: width 0.3s ease;
-    /* suaviza a transição */
-}
-
-
 .header a {
     text-decoration: none;
-    color: var(--soft-white);
-    font-size: 20px;
+    color: var(--tormenta-dark);
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .header a:hover {
-    opacity: 75%;
+    opacity: 55%;
 
 }

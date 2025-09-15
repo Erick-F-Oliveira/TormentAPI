@@ -19,16 +19,16 @@
     font-size: 18px;
   }
 
-  --tormenta:'Tormenta';
+  --tormenta20:'Tormenta';
   --titles:'Cinzel';
   --subtitles:'Bitter';
   --body:'Poppins';
   --black: rgb(107, 107, 107);
-  --soft-black:rgba(107, 107, 107, 0.500);
+  --soft-black:rgba(107, 107, 107, 0.493);
   --white: #fff;
   --soft-white: #ffffff;
-  --gray: #cbc8c8;
-  --tormenta: #f5f0f0;
+  --gray: #a8a8a8;
+  --tormenta: #c00000;
   --tormenta-light: #d55758;
   --tormenta-dark: #bf0101;
   --glow: rgba(224, 49, 49, 0.2);

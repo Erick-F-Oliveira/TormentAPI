@@ -4,7 +4,8 @@ function Header() {
     return (
         <header className={styles.header}>
 
-            <Link to="/"><img src="./logo.png" alt="Logo" className={styles.logo}></img></Link>
+            <Link to="/"><h1>TormentAPI</h1></Link>
+
 
 
         </header >
