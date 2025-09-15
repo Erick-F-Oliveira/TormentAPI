@@ -3,12 +3,12 @@
   width: 150px;
   color: var(--soft-white);
   background-color: var(--black);
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   font-family: var(--body);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: space-between;
   align-items: center;
   padding-top: 20px;
 }
@@ -16,8 +16,8 @@
 .list {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
-  align-items: stretch; 
+  justify-content: flex-start;
+  align-items: stretch;
   list-style: none;
   width: 100%;
   padding: 0;
@@ -29,17 +29,35 @@
   text-align: left;
 }
 
+.config a,
 .list a {
-  display: block; 
-  padding: 10px 16px; 
+  display: block;
+  padding: 10px 16px;
   cursor: pointer;
   text-decoration: none;
   color: var(--soft-white);
-  border-bottom: 2px solid var(--soft-white); 
+  border-bottom: 1px solid var(--soft-white);
   transition: border-color 0.3s;
 }
 
-.list a:hover {
+.list a:hover,
+.config a:hover {
   border-bottom-color: var(--tormenta);
   font-weight: 400;
+}
+
+.config {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.config li {
+  width: 100%;
+  text-align: left;
 }

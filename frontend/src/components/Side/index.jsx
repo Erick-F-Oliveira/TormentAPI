@@ -8,6 +8,10 @@ function Side() {
                 <li><Link to="/">Perfil</Link></li>
                 <li><Link to="/">Ajuda</Link></li>
             </ul>
+            <ul className={styles.config}>
+                <li><Link to="/">Config</Link></li>
+                <li><Link to="/">Sair</Link></li>
+            </ul>
 
 
         </div>

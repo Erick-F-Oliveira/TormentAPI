@@ -11,10 +11,10 @@ const customTheme = createTheme({
       contrastText: '#fff', // Cor do texto sobre a cor primária
     },
     tormenta: {
-      main: '#c00000',    
+      main: '#c00000',
       light: '#d55758',
       dark: '#bf0101',
-      contrastText: '#000000',
+      contrastText: '#fff',
     },
     // Você pode adicionar mais cores, como error, warning, info, success, etc.
   },
