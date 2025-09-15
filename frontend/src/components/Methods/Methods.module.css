@@ -1,0 +1,10 @@
+.methods {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 35rem;
+    height: 4rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}

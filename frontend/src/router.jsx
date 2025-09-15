@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./routes/authRoutes";
 import Mock from "./pages/mockDash";
+import Weapons from "./pages/Weapons";
 
 function AppRoutes() {
   return (
@@ -19,7 +20,9 @@ function AppRoutes() {
           <Route index element={<Home />}></Route>
           <Route path="auth" element={<Auth />}></Route>
           <Route path="mock" element={<Mock />} ></Route>
+          <Route path="weapons" element={<Weapons />}></Route>
           <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+
 
         </Route>
       </Routes>

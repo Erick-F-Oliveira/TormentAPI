@@ -16,17 +16,9 @@ const customTheme = createTheme({
       dark: '#bf0101',
       contrastText: '#fff',
     },
-    // Você pode adicionar mais cores, como error, warning, info, success, etc.
+
   },
-  typography: {
-    // Você também pode definir fontes, tamanhos, etc.
-    fontFamily: [
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-    ].join(','),
-  },
+
 });
 
 export default customTheme;
