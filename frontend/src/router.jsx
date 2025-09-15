@@ -1,8 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./pages/Home";
 /*import About from "./pages/About";
-import Contacts from "./pages/Contacts";
-import Projects from "./pages/Projects";
 import Error404 from "./pages/404";*/
 //import Signin from "./pages/Signin";
 import Base from "./pages/Base";
@@ -11,6 +9,7 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./routes/authRoutes";
+import Mock from "./pages/mockDash";
 
 function AppRoutes() {
   return (
@@ -19,7 +18,9 @@ function AppRoutes() {
         <Route path="/" element={<Base />}>
           <Route index element={<Home />}></Route>
           <Route path="auth" element={<Auth />}></Route>
-          <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>}/>
+          <Route path="mock" element={<Mock />} ></Route>
+          <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+
         </Route>
       </Routes>
     </BrowserRouter>
