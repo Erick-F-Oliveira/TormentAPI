@@ -2,7 +2,7 @@ import styles from "./Side.module.css";
 import { Link } from "react-router-dom";
 function Side() {
     return (
-        <Side className={styles.Side}>
+        <div className={styles.side}>
 
             <ul className={styles.list}>
                 <li><Link to="/">Perfil</Link></li>
@@ -10,7 +10,7 @@ function Side() {
             </ul>
 
 
-        </Side>
+        </div>
     );
 }
 export default Side;
