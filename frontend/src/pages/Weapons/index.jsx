@@ -16,7 +16,7 @@ function Weapons() {
             <div className={styles.weapons}>
                 <VerticalTabs />
 
-                Armas
+
             </div>
 
         </>
