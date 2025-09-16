@@ -5,6 +5,7 @@ import { FaGithub, FaArrowRight } from "react-icons/fa6";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton"
 import Methods from "../../components/Methods";
+import VerticalTabs from "../../components/Vertical";
 
 
 
@@ -13,7 +14,8 @@ function Weapons() {
     return (
         <>
             <div className={styles.weapons}>
-                <Methods />
+                <VerticalTabs />
+
                 Armas
             </div>
 
