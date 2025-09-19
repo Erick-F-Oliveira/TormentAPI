@@ -35,21 +35,36 @@ const customTheme = createTheme({
     MuiTabs: {
       styleOverrides: {
         indicator: {
-          backgroundColor: "#b6090e", // usa cor do Discord
+          backgroundColor: "#00ff00", // cor da barra de indcação no menu lateral (se não definir ele )
         },
       },
     },
+
     MuiTab: {
-      styleOverrides: {
-        root: {
-          fontFamily: 'Helvetica Neue',
-          fontSize: "0.9rem",
-          color: "#c00000", // cor normal
-          "&.Mui-selected": {
-            color: "#ed4245", // cor quando selecionado
+      variants: [
+        {
+          props: { variantType: "discord" },
+          style: {
+            color: "#4c5b9a",
+            "&.Mui-selected": {
+              color: "#738ADB",
+            },
+            fontFamily: '"Roboto", sans-serif',
+
+          },
+
+        },
+        {
+          props: { variantType: "tormenta" },
+          style: {
+            color: "#bf0101",
+            "&.Mui-selected": {
+              color: "#c00000",
+            },
+            fontFamily: '"Arial", sans-serif',
           },
         },
-      },
+      ],
     },
   },
 });
