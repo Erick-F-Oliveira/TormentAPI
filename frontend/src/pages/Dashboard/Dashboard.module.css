@@ -1,15 +1,19 @@
 .dash {
+    
     width: 100%;
     min-height: 90vh;
+
+    text-align: center;
+    justify-content: center;
+ 
+    background-color: var(--soft-black);
+    font-family: var(--poppins);
+    font-size: 1rem;
+
     display: flex;
     flex-direction: column;
-   
-    justify-content: space-evenly;
-    color: var(--soft-white);
-    background-color: var(--soft-black);
-    font-family: var(--subtitles);
-    padding: 0.5rem;
 }
+
 
 .profile{
     display: flex;

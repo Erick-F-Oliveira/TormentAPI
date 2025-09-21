@@ -2,6 +2,8 @@ import React from "react";
 import { useAuth } from "../../context/AuthContext";
 import { Navigate } from "react-router-dom";
 import style from "./Dashboard.module.css";
+import VerticalTabs from "../../components/Vertical";
+import Methods from "../../components/Methods";
 
 const Dashboard = () => {
   const { isLoggedIn, user, loading } = useAuth();
@@ -25,7 +27,14 @@ const Dashboard = () => {
   return (
     <>
       <div className={style.dash}>
-        <div className={style.profile}>
+         <VerticalTabs
+                tabs={[
+                    { label: "Rotas", content: <Methods />, color: "#db2631", textColor: "#4c5b9a", selectedColor: "#738ADB" },//define uma cor exclusiva para essa seleção
+                    { label: "Discord", content: "Configurações do Discord aqui" },
+                    { label: "Tormenta", content: 
+                    "tormenta"
+                    },
+                    { label: "Perfil", content: <div className={style.profile}>
           <h1>Bem-vindo, {user.username}!</h1>
           <img
             src={avatarUrl}
@@ -34,7 +43,12 @@ const Dashboard = () => {
           />
           <p>Este é o seu dashboard.</p>
           Você já contribuiu com {contribuition} arquivos
-        </div>
+        </div>},
+
+                ]}
+
+            />
+        
       </div>
     </>
   );

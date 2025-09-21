@@ -17,7 +17,7 @@ const startApi = async () => {
   // não funciona.
   app.use(
     cors({
-      origin: "http://localhost:5174", // A URL do seu front-end
+      origin: "http://localhost:5173", // A URL do seu front-end
       credentials: true,
     })
   );
