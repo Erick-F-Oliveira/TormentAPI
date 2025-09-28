@@ -8,4 +8,6 @@ router.use(isAuthenticated);
 
 router.get('/', getUserInfo);
 
+router.get('/', getUserInfo);
+
 export default router;

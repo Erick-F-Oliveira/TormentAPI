@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.use(isAuthenticated);
 
-//Rota de criação de livros
+//Rota do dashboard
 router.get("/", getDash);
 
 export default router;

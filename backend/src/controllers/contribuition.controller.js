@@ -1,19 +1,5 @@
-import User from "../models/User.js";
 import Book from "../models/Book.js";
 import Weapon from "../models/Weapon.js";
-
-//TODO: Melhorar a lógica do que é trazido na rota user e na de dashboard
-
-const getUserInfo = async (req, res) => {
-  // Apenas envia o objeto de usuário completo
-  // O middleware isAuthenticated já garantiu que req.user existe
- res.status(200).json({
-    isLoggedIn: true,
-    user: req.user 
-  });
-};
-
-
 
  const getMyContributions = async (req, res) => {
   try {
@@ -42,5 +28,4 @@ const getUserInfo = async (req, res) => {
   }
 };
 
-export { getMyContributions , getUserInfo};
-
+export { getMyContributions };

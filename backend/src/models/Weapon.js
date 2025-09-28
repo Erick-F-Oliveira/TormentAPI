@@ -25,6 +25,8 @@ let weaponSchema = new Schema(
   },
   { timestamps: true }
 );
+bookSchema.index({ operator: 1 }); // Indexa o campo operator para consultas mais rápidas
+
 // Gera uniqueID automaticamente
 weaponSchema.pre("save", function (next) {
   if (
